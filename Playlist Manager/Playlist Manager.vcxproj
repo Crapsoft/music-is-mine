@@ -112,6 +112,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MP3tag.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MP3tag.h" />

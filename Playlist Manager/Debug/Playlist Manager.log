@@ -1,3 +1,5 @@
-﻿  main.cpp
-  Playlist Manager.vcxproj -> D:\Semestr_3\Practice\music-is-mine\Playlist Manager\Debug\Playlist Manager.exe
-  Playlist Manager.vcxproj -> D:\Semestr_3\Practice\music-is-mine\Playlist Manager\Debug\Playlist Manager.pdb (Partial PDB)
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppClean.targets(76,5): warning : Access to the path 'd:\semestr_3\practice\music-is-mine\playlist manager\debug\playlist manager.exe' is denied.
+  MP3tag.cpp
+  main.cpp
+  Generating Code...
+LINK : fatal error LNK1104: cannot open file 'D:\Semestr_3\Practice\music-is-mine\Playlist Manager\Debug\Playlist Manager.exe'
