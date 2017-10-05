@@ -16,6 +16,10 @@ public:
 	
 	TAGdata(char* path);
 	char* getTitle();
+	char* getArtist();
+	char* getAlbum();
+	char* getYear();
+	int getGenre();
 };
 
 #endif
