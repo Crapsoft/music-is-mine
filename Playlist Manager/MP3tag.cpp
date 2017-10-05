@@ -40,3 +40,28 @@ TAGdata::TAGdata(char* path)
 
 	mp3File.close();
 }
+
+char* TAGdata::getTitle()
+{
+	return this->title;
+}
+
+char* TAGdata::getArtist()
+{
+	return this->artist;
+}
+
+char* TAGdata::getAlbum()
+{
+	return this->album;
+}
+
+char* TAGdata::getYear()
+{
+	return this->year;
+}
+
+int TAGdata::getGenre()
+{
+	return this->genre;
+}

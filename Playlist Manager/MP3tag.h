@@ -15,6 +15,7 @@ public:
 	int genre;
 	
 	TAGdata(char* path);
+	char* getTitle();
 };
 
 #endif

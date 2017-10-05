@@ -9,6 +9,7 @@ using namespace std;
 int main()
 {
 	TAGdata file("Eleven Wives.mp3");
+	cout << file.getArtist() << ' ' << file.getAlbum() << ' ' << file.getTitle() << endl;
 
 
 	
