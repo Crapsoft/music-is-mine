@@ -113,9 +113,11 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MP3tag.cpp" />
+    <ClCompile Include="Playlist.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MP3tag.h" />
+    <ClInclude Include="Playlist.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -18,12 +18,18 @@
     <ClInclude Include="MP3tag.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Playlist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MP3tag.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Playlist.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
