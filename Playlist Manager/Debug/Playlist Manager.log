@@ -1,3 +1,6 @@
 ﻿  main.cpp
+c:\users\admin\documents\github\music-is-mine\playlist manager\main.cpp(33): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\admin\documents\github\music-is-mine\playlist manager\main.cpp(42): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\admin\documents\github\music-is-mine\playlist manager\main.cpp(66): warning C4018: <: несоответствие типов со знаком и без знака
   Playlist Manager.vcxproj -> C:\Users\Admin\Documents\GitHub\music-is-mine\Playlist Manager\Debug\Playlist Manager.exe
   Playlist Manager.vcxproj -> C:\Users\Admin\Documents\GitHub\music-is-mine\Playlist Manager\Debug\Playlist Manager.pdb (Partial PDB)
