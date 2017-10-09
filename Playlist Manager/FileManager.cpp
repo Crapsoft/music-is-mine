@@ -84,6 +84,23 @@ void FileManager::cdfolder(string com)
 	}
 
 }
+// cd .. command
+void FileManager::cdback() 
+{
+	path.erase(path.size() - 2);
+	int index = path.size() - 1;
+	for (size_t i = path.size() - 1; i > 0; i--)
+	{
+
+		if (path[i] == '\\')
+		{
+			index = i;
+			break;
+		}
+	}
+	path.erase(path.begin() + index, path.end());
+	path += "\\*";
+}
 
 
 FileManager::~FileManager()

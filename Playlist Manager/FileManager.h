@@ -13,7 +13,7 @@ public:
 	void ls();
 	void pwd();
 	void cdfolder(string com);
-
+	void cdback();
 	~FileManager();
 };
 
