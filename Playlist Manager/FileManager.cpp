@@ -5,11 +5,11 @@
 #include <string>
 #include <vector>
 #include <Windows.h>
-
+#include <sstream>
 
 FileManager::FileManager()
 {
-	path = "C:\\Users\\*";
+	path = "C:\\*";
 }
 string FileManager::getPath() {
 	return path;
@@ -34,9 +34,9 @@ vector<string> FileManager::FilesandFolders()
 	}
 
 	//Remove .. and desktop.ini files
-	for (int i = 0; i < filenames.size(); i++)
+	for (size_t i = 0; i < filenames.size(); i++)
 	{
-		if (filenames[i].compare("desktop.ini") == 0 || filenames[i].size() < 4)
+		if (filenames[i].compare("desktop.ini") == 0 || filenames[i].compare(".."))
 		{
 			filenames.erase(filenames.begin() + i);
 			vector<string>(filenames).swap(filenames);
@@ -45,15 +45,43 @@ vector<string> FileManager::FilesandFolders()
 	return filenames;
 
 }
+//Linux command line:
+//ls command
 void FileManager::ls() {
 	vector<string> list = FilesandFolders();
-	for (int i = 0; i < list.size(); i++)
+	for (size_t i = 0; i < list.size(); i++)
 	{
 		cout << list[i] << endl;
 	}
 }
+//pwd command
 void FileManager::pwd() {
 	cout << path;
+
+}
+//cd *folder* command
+void FileManager::cdfolder(string com)
+{
+	vector<string> files = FilesandFolders();
+	bool check = false;
+	for (size_t i = 0; i < files.size(); i++)
+	{
+		if (files[i] == com)
+		{
+			check = true;
+			break;
+		}
+	}
+	if (check)
+	{
+		string temp = path;
+		path.erase(path.size() - 1);
+		path += com + "\\*";
+	}
+	else
+	{
+		cout << "There is no folder with name " << "'" << com << "'";
+	}
 
 }
 

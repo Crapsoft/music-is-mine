@@ -12,6 +12,7 @@ public:
 	vector<string> FilesandFolders();
 	void ls();
 	void pwd();
+	void cdfolder(string com);
 
 	~FileManager();
 };
