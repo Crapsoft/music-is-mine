@@ -5,7 +5,7 @@
 
 using namespace std;
 
-TAGdata::TAGdata(char* path)
+TAGdata::TAGdata(const char* path)
 {
 	const int fileNameLength = 1024;
 	const int mp3TagSize = 128;

@@ -1,15 +1,13 @@
 #include "Playlist.h"
-#include "MP3tag.h"
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <vector>
-#include <Windows.h>
-
 
 Playlist::Playlist()
 {
-	
+	this->name = "default playlist";
+}
+
+Playlist::Playlist(string _name)
+{
+	this->name = _name;
 }
 
 
@@ -44,4 +42,57 @@ Playlist::Playlist()
 Playlist::~Playlist()
 {
 
+}
+
+Playlist& Playlist::operator+(const Playlist& rhs)
+{
+	for (int i = 0; i < rhs.mp3.size(); i++) {
+		(*this).mp3.push_back(rhs.mp3[i]);
+	}
+	return *this;
+}
+
+Playlist& Playlist::operator+=(const string rhs)
+{
+	this->mp3.push_back(rhs);
+	return *this;
+}
+
+Playlist& Playlist::operator-=(const string rhs)
+{
+	for (int i = 0; i < this->mp3.size(); i++) {
+		if (this->mp3[i] == rhs) {
+			this->mp3.erase(this->mp3.begin() + i);
+		}
+	}
+
+	return *this;
+}
+
+Playlist& Playlist::operator-=(const Playlist& rhs)
+{
+	for (int i = 0; i < rhs.mp3.size(); i++) {
+		for (int j = 0; j < this->mp3.size(); j++) {
+			if (rhs.mp3[i] == this->mp3[j]) {
+				this->mp3.erase(this->mp3.begin() + j);
+			}
+		}
+	}
+
+	return *this;
+}
+
+int Playlist::outputt()
+{
+	ofstream myfile;
+	myfile.open("playlist.m3u");
+	myfile << "#EXTM3U" << endl;
+	for (int i = 0; i < this->mp3.size(); i++) {
+		myfile << "#EXTINF:";
+		const char * sttr = this->mp3[i].c_str();
+		TAGdata song(sttr);
+		myfile << this->mp3[i] << endl;
+	}
+	myfile.close();
+	return 1;
 }

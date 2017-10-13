@@ -1,1 +1,8 @@
-﻿LINK : fatal error LNK1104: не удается открыть файл "gdi32.lib"
+﻿  Playlist.cpp
+d:\semestr_3\practice\music-is-mine\playlist manager\playlist.cpp(49): warning C4018: '<': signed/unsigned mismatch
+d:\semestr_3\practice\music-is-mine\playlist manager\playlist.cpp(63): warning C4018: '<': signed/unsigned mismatch
+d:\semestr_3\practice\music-is-mine\playlist manager\playlist.cpp(74): warning C4018: '<': signed/unsigned mismatch
+d:\semestr_3\practice\music-is-mine\playlist manager\playlist.cpp(75): warning C4018: '<': signed/unsigned mismatch
+d:\semestr_3\practice\music-is-mine\playlist manager\playlist.cpp(90): warning C4018: '<': signed/unsigned mismatch
+  Playlist Manager.vcxproj -> D:\Semestr_3\Practice\music-is-mine\Playlist Manager\Debug\Playlist Manager.exe
+  Playlist Manager.vcxproj -> D:\Semestr_3\Practice\music-is-mine\Playlist Manager\Debug\Playlist Manager.pdb (Partial PDB)

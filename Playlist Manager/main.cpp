@@ -5,6 +5,8 @@
 #include <vector>
 #include <Windows.h>
 #include "Playlist.h"
+#include "FileManager.h"
+#include <cstdlib>
 
 using namespace std;
 
@@ -16,17 +18,19 @@ void cdback();
 //C:\\Users\\Public\\Music\\*    for personal use
 int main()
 {
-	string path = "C:\\Users\\Public\\Music";
-	TAGdata file("C:\\Users\\Public\\Music\\fd68d237712c49.mp3");
+	string path = "C:\\Users\\Public\\Public Music";
+	//TAGdata file("C:\\Users\\Public\\Music\\fd68d237712c49.mp3");
 	//cout << file.getArtist() << ' ' << file.getAlbum() << ' ' << file.getTitle() << endl;
 	string cmd = "";
+	FileManager * manag = new FileManager();
+	Playlist A;
 	do
 	{
 		cout << path << " ";
 		getline(cin, cmd);
 		if (cmd.find("ls") == 0)
 		{
-			ls();
+			manag->ls();
 		}
 		else if (cmd.find("cd") == 0)
 		{
@@ -58,24 +62,25 @@ int main()
 		{
 			if (cmd.find("create_null") == 0)
 			{
-				//create
+				//Playlist A;
 			}
 			else
 			{
-				//Playlist A(path, cmd.substr(7));
-				//A.getSongs();
+				Playlist A(cmd.substr(7));
+				A.outputt();
 			}
 		}
 		else if (cmd.find("add") == 0)
 		{
 			if (cmd.find("_file") == 4)
 			{
-				//B += cmd.substr(11);
+				 A += cmd.substr(11);
 				//add
 			}
 			else if (cmd.find("_playlist") == 4)
 			{
-				//B += C;
+				Playlist C;
+				A = A + C;
 			}
 			else
 			{
@@ -87,16 +92,16 @@ int main()
 
 			if (cmd.find("_file") == 5)
 			{
-				//B -= cmd.substr(11);
-				//vidnyaty
+				A -= cmd.substr(11);
 			}
 			else if (cmd.find("_playlist") == 5)
 			{
-				//B -= C;
+				Playlist C;
+				A -= C;
 			}
 			else
 			{
-				//B - path;
+				// nothing
 			}
 		}
 		else if (cmd.find("exit") == 0)

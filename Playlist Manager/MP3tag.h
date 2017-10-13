@@ -14,7 +14,7 @@ public:
 	char comment[30];
 	int genre;
 	
-	TAGdata(char* path);
+	TAGdata(const char* path);
 	char* getTitle();
 	char* getArtist();
 	char* getAlbum();
